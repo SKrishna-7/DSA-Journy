@@ -111,6 +111,15 @@ By writing and analyzing these pattern programs, I learned:
 5. These form the foundation for **matrix, string, and recursion problems** in DSA.
 
 
+
+## 📘 Reference Resource
+
+These pattern problems were practiced using  
+**[Striver’s Pattern Sheet (TakeUForward)](https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/)** —  
+a structured guide to mastering **loops, logic, and pattern-based thinking** before starting full-fledged DSA.
+
+--- 
+
 ## 👨‍💻 Author
 
 **Suresh Krishna S**  
