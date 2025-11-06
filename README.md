@@ -2,7 +2,6 @@
 
 Welcome to my **Data Structures & Algorithms (DSA) Repository** 👨‍💻  
 This repo documents my complete DSA learning path — implemented in both **Python** 🐍 and **C++** ⚡ —  
-based on **[Striver’s A2Z DSA Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)**.
 
 ---
 
@@ -99,4 +98,8 @@ a structured and beginner-friendly roadmap to mastering DSA.
 🎓 AI & DS Student 
 📅 Started: November 2025  
 🛠️ Language: C++ & Python  
+
+
+🌐 [Portfolio](https://sureshkrishnan.vercel.app/)  
+💼 [LinkedIn](https://www.linkedin.com/in/suresh-krishnan-s/)
 
