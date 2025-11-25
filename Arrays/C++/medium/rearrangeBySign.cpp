@@ -66,9 +66,58 @@ void rearrangeBySignInPlace(vector<int> &nums) {
     }
 }
 
+//Vareity -2 {Unequal number of positive and negative}
+
+void rearrangeUnequalSign(vector<int> &nums,int n){
+
+    vector<int> pos;
+    vector<int> neg;
+
+    for(int i=0;i<n;i++){
+        
+        if(nums[i] < 0){
+            neg.push_back(nums[i]);
+        }
+        else{
+            pos.push_back(nums[i]);
+        }
+    }
+
+    if(pos.size() > neg.size()){
+
+        for(int i=0;i<neg.size();i++){
+            nums[2*i] = pos[i];
+            nums[2*i+1] = neg[i];
+        }
+
+        int index=neg.size() * 2;
+
+        for(int j=neg.size();j<pos.size();j++){
+            nums[index] = pos[j];
+            index++;
+        }
+
+    }else{
+        
+        for(int i=0;i<pos.size();i++){
+            nums[2*i] = pos[i];
+            nums[2*i+1] = neg[i];
+        }
+
+        int index=pos.size() * 2;
+
+        for(int j=pos.size();j<neg.size();j++){
+            nums[index] = neg[j];
+            index++;
+        }
+    
+    }
+
+}
+
 int main(){
 
-    vector<int> nums={1,2,3,-1,-2,-3,4,-3,-3};
+    vector<int> nums={1,2,3,-1,-2,-3,4,5,-5};
     int n=nums.size();  
 
 
@@ -80,7 +129,9 @@ int main(){
     // arrangeBySign_Brute(nums,n);
     // arrangeBySign_Optimal(nums,n);
 
-    rearrangeBySignInPlace(nums);
+    // rearrangeBySignInPlace(nums);
+
+    rearrangeUnequalSign(nums,n);
 
     cout<<endl;
     cout<<"After Arrange : ";
