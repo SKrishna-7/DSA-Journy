@@ -1,8 +1,31 @@
 #include <iostream>
 #include<vector>
 #include<algorithm>
+#include<unordered_map>
 
 using namespace std;
+
+int majorityElement_better(vector <int> arr){
+
+    int n=arr.size();
+    unordered_map<int,int> hmap;
+    hmap[0] = 1;
+
+    for(auto &num : arr){
+        hmap[num] +=1;
+    }
+
+    for(auto &pair:hmap){
+        if(pair.second >= n/2){
+            return pair.first;
+        }
+    }
+
+    return -1;
+
+
+}
+
 
 int majorityElement(vector <int> arr){
 
@@ -43,7 +66,8 @@ int main(){
     int n=arr.size();
     
 
-    cout<< majorityElement(arr);
+    // cout<< majorityElement(arr);
+    cout<< majorityElement_better(arr);
 
     return 0;
 }
