@@ -1,0 +1,147 @@
+# 📚 Stack & Queue 
+
+## Stack Basics
+
+- Stack using Array
+- Stack using Linked List
+- Implement Stack using Queue
+- Implement Queue using Stack
+- Balanced Parentheses
+- Min Stack
+
+---
+
+## Expression Conversion
+
+- Infix → Postfix
+- Infix → Prefix
+- Prefix → Infix
+- Prefix → Postfix
+- Postfix → Infix
+- Postfix → Prefix
+- Expression Evaluation
+
+---
+
+## Monotonic Stack
+
+- Next Greater Element
+- Next Greater Element II
+- Previous Greater Element
+- Next Smaller Element
+- Previous Smaller Element
+- Number of Greater Elements to the Right
+
+---
+
+## Advanced Stack Problems
+
+- Trapping Rain Water
+- Sum of Subarray Minimums
+- Sum of Subarray Ranges
+- Remove K Digits
+- Asteroid Collision
+- Largest Rectangle in Histogram
+- Maximal Rectangle
+
+---
+
+## Queue Basics
+
+- Queue using Array
+- Circular Queue
+- Queue using Linked List
+- Queue using Stack
+- Stack using Queue
+
+---
+
+## Deque
+
+- Sliding Window Maximum
+
+---
+
+# 🧠 Important Patterns Learned
+
+### Stack
+
+- Monotonic Increasing Stack
+- Monotonic Decreasing Stack
+- Expression Parsing
+- Previous / Next Greater Element
+- Previous / Next Smaller Element
+
+### Queue
+
+- FIFO
+- Circular Queue
+- Deque
+- Sliding Window
+
+---
+
+
+
+### Monotonic Stack
+
+Used whenever the problem asks for:
+
+- Next Greater Element
+- Next Smaller Element
+- Previous Greater Element
+- Previous Smaller Element
+- First Bigger/Smaller Element
+- Contribution Technique
+
+---
+
+### Contribution Technique
+
+Instead of generating every subarray:
+
+```
+Contribution =
+Element × Left Choices × Right Choices
+```
+
+Used in:
+
+- Sum of Subarray Minimums
+- Sum of Subarray Maximums
+- Sum of Subarray Ranges
+
+---
+
+### Histogram Pattern
+
+```
+Binary Matrix
+        ↓
+Histogram
+        ↓
+Largest Rectangle
+```
+
+Used in:
+
+- Largest Rectangle in Histogram
+- Maximal Rectangle
+
+---
+
+### Sliding Window Pattern
+
+```
+Moving Window
+        ↓
+Maintain Useful Elements
+        ↓
+Deque
+```
+
+Used in:
+
+- Sliding Window Maximum
+
+---
