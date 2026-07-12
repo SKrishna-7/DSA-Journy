@@ -1,6 +1,12 @@
-# 📚 Stack & Queue 
+# 📚 Stack & Queue Interview Preparation
 
-## Stack Basics
+This repository contains my solutions for **Stack & Queue** problems, covering everything from the basics to advanced interview questions. The focus is on understanding patterns rather than memorizing solutions.
+
+---
+
+# 📖 Topics Covered
+
+## 1. Stack Basics
 
 - Stack using Array
 - Stack using Linked List
@@ -11,7 +17,7 @@
 
 ---
 
-## Expression Conversion
+## 2. Expression Conversion & Evaluation
 
 - Infix → Postfix
 - Infix → Prefix
@@ -23,7 +29,7 @@
 
 ---
 
-## Monotonic Stack
+## 3. Monotonic Stack
 
 - Next Greater Element
 - Next Greater Element II
@@ -31,22 +37,25 @@
 - Next Smaller Element
 - Previous Smaller Element
 - Number of Greater Elements to the Right
+- Online Stock Span
 
 ---
 
-## Advanced Stack Problems
+## 4. Advanced Stack Problems
 
 - Trapping Rain Water
 - Sum of Subarray Minimums
+- Sum of Subarray Maximums
 - Sum of Subarray Ranges
 - Remove K Digits
 - Asteroid Collision
 - Largest Rectangle in Histogram
 - Maximal Rectangle
+- Longest Valid Parentheses
 
 ---
 
-## Queue Basics
+## 5. Queue Basics
 
 - Queue using Array
 - Circular Queue
@@ -56,23 +65,41 @@
 
 ---
 
-## Deque
+## 6. Deque
 
 - Sliding Window Maximum
 
 ---
 
+## 7. Design Problems
+
+- LRU Cache
+- LFU Cache
+
+---
+
+## 8. Miscellaneous Problems
+
+- Celebrity Problem
+
+---
+
 # 🧠 Important Patterns Learned
 
-### Stack
+## Stack
 
 - Monotonic Increasing Stack
 - Monotonic Decreasing Stack
 - Expression Parsing
 - Previous / Next Greater Element
 - Previous / Next Smaller Element
+- Stack Simulation
+- Index Based Stack
+- Contribution Technique
 
-### Queue
+---
+
+## Queue
 
 - FIFO
 - Circular Queue
@@ -81,9 +108,7 @@
 
 ---
 
-
-
-### Monotonic Stack
+## Monotonic Stack Pattern
 
 Used whenever the problem asks for:
 
@@ -91,16 +116,16 @@ Used whenever the problem asks for:
 - Next Smaller Element
 - Previous Greater Element
 - Previous Smaller Element
-- First Bigger/Smaller Element
+- First Greater/Smaller Element
 - Contribution Technique
 
 ---
 
-### Contribution Technique
+## Contribution Technique
 
 Instead of generating every subarray:
 
-```
+```text
 Contribution =
 Element × Left Choices × Right Choices
 ```
@@ -113,14 +138,14 @@ Used in:
 
 ---
 
-### Histogram Pattern
+## Histogram Pattern
 
-```
+```text
 Binary Matrix
         ↓
-Histogram
+Convert each row into Histogram
         ↓
-Largest Rectangle
+Largest Rectangle in Histogram
 ```
 
 Used in:
@@ -130,9 +155,9 @@ Used in:
 
 ---
 
-### Sliding Window Pattern
+## Sliding Window Pattern
 
-```
+```text
 Moving Window
         ↓
 Maintain Useful Elements
@@ -143,5 +168,155 @@ Deque
 Used in:
 
 - Sliding Window Maximum
+
+---
+
+## Stack Simulation Pattern
+
+Used when elements interact with previously processed elements.
+
+Examples:
+
+- Asteroid Collision
+- Balanced Parentheses
+- Remove K Digits
+- Min Stack
+
+---
+
+## Index Based Stack Pattern
+
+Instead of storing values, store indices whenever distance or length is required.
+
+Examples:
+
+- Largest Rectangle in Histogram
+- Sliding Window Maximum
+- Longest Valid Parentheses
+
+---
+
+## Design Pattern
+
+### LRU Cache
+
+```text
+HashMap
+      +
+Doubly Linked List
+```
+
+Time Complexity
+
+- get() → O(1)
+- put() → O(1)
+
+---
+
+### LFU Cache
+
+```text
+HashMap (Key → Node)
+
++
+
+HashMap (Frequency → DLL)
+
++
+
+Multiple Doubly Linked Lists
+```
+
+Time Complexity
+
+- get() → O(1)
+- put() → O(1)
+
+---
+
+# ⭐ Interview Formulas
+
+### Histogram
+
+```text
+Width = NSE - PSE - 1
+Area = Height × Width
+```
+
+---
+
+### Contribution
+
+```text
+Contribution =
+Element × Left Choices × Right Choices
+```
+
+---
+
+### Stock Span
+
+```text
+Span =
+Current Index - Previous Greater Index
+```
+
+---
+
+### Trapping Rain Water
+
+```text
+Water =
+min(LeftMax, RightMax) - Height
+```
+
+---
+
+### Sliding Window Maximum
+
+```text
+Deque Front = Maximum Element
+```
+
+---
+
+### Longest Valid Parentheses
+
+```text
+Length =
+Current Index - Stack Top
+```
+
+Store **indices**, not characters.
+
+---
+
+# 📈 Time Complexity Summary
+
+| Problem | Time | Space |
+|---------|------|-------|
+| Next Greater Element | O(N) | O(N) |
+| Stock Span | O(N) | O(N) |
+| Trapping Rain Water | O(N) | O(1) |
+| Largest Rectangle | O(N) | O(N) |
+| Maximal Rectangle | O(R × C) | O(C) |
+| Sliding Window Maximum | O(N) | O(K) |
+| Sum of Subarray Minimums | O(N) | O(N) |
+| Asteroid Collision | O(N) | O(N) |
+| Remove K Digits | O(N) | O(N) |
+| LRU Cache | O(1) | O(Capacity) |
+| LFU Cache | O(1) | O(Capacity) |
+
+---
+
+# 🚀 Key Takeaways
+
+- Use **Monotonic Stack** for nearest greater/smaller element problems.
+- Use **Contribution Technique** to avoid generating all subarrays.
+- Convert **Binary Matrix → Histogram** for rectangle problems.
+- Use **Deque** for Sliding Window Maximum.
+- Store **indices instead of values** whenever distance or length is required.
+- Use **HashMap + Doubly Linked List** for cache design problems.
+- Always identify the underlying pattern before jumping into implementation.
 
 ---

@@ -14,8 +14,8 @@ int largestRectangleInHistogram_brute(vector<int> &nums,int n){
       int left = i-1;
       
       while(left >= 0 && nums[left] >= nums[i]){
-          left--;
           width++;
+          left--;
       }
         
     int right=i+1;
